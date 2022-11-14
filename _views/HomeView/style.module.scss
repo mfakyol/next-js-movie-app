@@ -1,0 +1,67 @@
+.homeView {
+  & > .heroes {
+    position: relative;
+    max-width: 1300px;
+    height: auto;
+    width: 100%;
+    margin: 32px auto 0;
+    background-image: url("/images/heroes-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+
+    & .heroesOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      border-radius: 20px;
+    }
+
+    & > .heroesContent {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-width: 964px;
+      margin: 0 auto;
+      color: #fff;
+      z-index: 2;
+      padding: 70px 0;
+
+      & > .welcome {
+        margin-bottom: 32px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      & > .slogan {
+        margin-bottom: 48px;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 39px;
+      }
+
+      & > .searchInput {
+        height: 40px;
+        text-indent: 32px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #353535;
+        border-radius: 50px;
+        background-color: #fff;
+        border: none;
+      }
+    }
+  }
+
+  & > .section {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}

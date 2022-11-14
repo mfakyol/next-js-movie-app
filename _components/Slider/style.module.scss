@@ -1,0 +1,101 @@
+.slider {
+  width: 100%;
+  margin-top: 32px;
+
+  & > .sliderTitle {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #242424;
+  }
+
+  & > .sliderListWrapper {
+    position: relative;
+    width: 100%;
+
+    & > .arrow {
+      position: absolute;
+      top: 110px;
+      z-index: 1;
+      width: 32px;
+      height: 32px;
+      background-color: #fff;
+      padding: 6px;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+
+      &.left {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+
+      &.right {
+        transform: translate(50%, -50%) rotate(-90deg);
+        right: 0;
+      }
+    }
+
+    & > .sliderList {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & > .sliderItem {
+        margin-right: 16px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        & > .sliderItemContent {
+          position: relative;
+
+          & > .score {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 12px;
+            color: #242424;
+            border-radius: 10px;
+            padding: 4px 8px;
+            background: rgba(251, 255, 57, 0.7);
+          }
+
+          & > .poster {
+            width: 100%;
+            border-radius: 10px;
+            width: 150px;
+            height: 225px;
+            margin-bottom: 8px;
+          }
+
+          & > .title {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 4px;
+          }
+
+          & > .releaseDate {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            color: #353535;
+          }
+        }
+      }
+    }
+  }
+}

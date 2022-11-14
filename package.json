@@ -11,7 +11,11 @@
   "dependencies": {
     "next": "13.0.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-slick": "^0.29.0",
+    "sass": "^1.56.1",
+    "slick-carousel": "^1.8.1",
+    "slugify": "^1.6.5"
   },
   "devDependencies": {
     "eslint": "8.27.0",
