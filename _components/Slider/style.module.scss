@@ -59,6 +59,8 @@
 
         & > .sliderItemContent {
           position: relative;
+          display: flex;
+          flex-direction: column;
 
           & > .score {
             position: absolute;

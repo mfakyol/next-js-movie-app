@@ -8,6 +8,7 @@
       "@layouts/*": ["_layouts/*"],
       "@styles/*": ["styles/*"],
       "@services/*": ["services/*"],
+      "@hooks/*": ["hooks/*"],
     }
   }
 }

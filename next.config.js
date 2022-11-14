@@ -5,4 +5,13 @@ module.exports = {
     locales: ["en", "tr", "de"],
     defaultLocale: "en",
   },
+
+  async rewrites() {
+    return [
+      {
+        source: "/movie/:id/:slug",
+        destination: "/movie/:id",
+      },
+    ];
+  },
 };

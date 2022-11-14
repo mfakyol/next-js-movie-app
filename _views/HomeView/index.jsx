@@ -1,3 +1,4 @@
+import Search from "_components/Search";
 import Slider from "_components/Slider";
 import classes from "./style.module.scss";
 
@@ -10,7 +11,7 @@ function HomeView({ popularMovies, trendingMovies, upcomingMovies }) {
         <div className={classes.heroesContent}>
           <h2 className={classes.welcome}>Hoşgeldin,</h2>
           <h3 className={classes.slogan}>Milyonlarca filmi, Şimdi keşfedin.</h3>
-          <input className={classes.searchInput} placeholder="Search Film..." />
+          <Search />
         </div>
       </div>
 
