@@ -72,7 +72,7 @@ function Pagination({ currentPage, totalPages }) {
         {currentPage < totalPages - 4 && <span>...</span>}
 
         {currentPage < totalPages - 3 && (
-          <span className={classes.page} data-page={totalPages}>
+          <span className={classes.page} data-page={totalPages -1}>
             {totalPages - 1}
           </span>
         )}

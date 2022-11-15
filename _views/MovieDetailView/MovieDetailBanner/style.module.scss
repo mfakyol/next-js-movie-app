@@ -1,0 +1,91 @@
+.MovieDetailBanner {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 32px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background-color: rgba(50, 50, 50, 0.9);
+  }
+
+  & > .detailBody {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    & > .posterWrapper {
+      display: inline-flex;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 300px;
+      min-width: 300px;
+      height: 450px;
+      min-height: 450px;
+      margin-right: 32px;
+
+      & > .poster {
+        width: 300px;
+        height: 450px;
+      }
+    }
+
+    & > .detailContent {
+      padding: 32px 0;
+
+      color: #fff;
+
+      & > .title {
+        font-size: 32px;
+        font-weight: 600;
+      }
+
+      & > .releaseDate {
+        display: block;
+        margin-top: 8px;
+        color: #ddd;
+      }
+
+      & > .score {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 16px;
+  
+
+        & > .scoreText {
+          background-color: #f0f0f0;
+          color: #121212;
+          padding: 8px 16px;
+          border-radius: 10px;
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        & > .scoreLabel {
+          margin-left: 8px;
+        }
+      }
+
+      & > .overview {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+
+        & > .overviewTitle {
+          margin-bottom: 8px;
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

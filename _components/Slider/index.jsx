@@ -54,7 +54,7 @@ function Slider({ items = [], title }) {
             alt=""
           />
         )}
-        <div ref={ref} className={classes.sliderList}>
+        <div ref={ref} className={`${classes.sliderList} hideScrollbar`}>
           {items.map((item, index) => (
             <div key={index} className={classes.sliderItem} title={item.title}>
               <Link href={`/movie/${item.id}/${slug(item.title)}`} key={item.id} className={classes.sliderItemContent}>

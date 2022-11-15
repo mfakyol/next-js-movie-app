@@ -1,0 +1,57 @@
+.cast {
+  width: 100%;
+  margin-top: 32px;
+
+
+  & > .title {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #242424;
+  }
+
+  & > .sliderWrapper {
+    width:100%;
+
+
+    & > .slider {
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      & > .item {
+        margin-right: 16px;
+        border: 1px solid #d0d0d0;
+        border-radius: 10px;
+        overflow: hidden;
+        min-width: 138px;
+
+        &:last-child {
+          margin-right:0;
+        }
+
+        & > .photo {
+          width: 138px;
+          height: 175px;
+
+        }
+
+        & > .name {
+          font-size: 16px;
+          font-weight: 500;
+          padding:0 8px;
+          margin-bottom: 4px;
+        }
+
+        & > .character {
+          font-size: 13px;
+          padding:0 8px;
+          margin-bottom: 4px;
+        }
+        
+        
+      }
+    }
+  }
+}

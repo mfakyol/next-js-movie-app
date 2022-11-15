@@ -8,7 +8,7 @@ function MovieDetailPage({ detail }) {
   return (
     <>
       <Head>
-        <title>{detail.title} | Movie App</title>
+        <title>{`${detail.title} | Movie App`}</title>
       </Head>
       <MovieDetailView detail={detail} />
     </>
@@ -26,8 +26,9 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   try {
     const detailResponse = await http.get(
-      `/movie/${context.params.id}?language=${context.locale}&append_to_response=videos,images`
+      `/movie/${context.params.id}?language=${context.locale}&append_to_response=videos,images,credits,budget,revenue,status`
     );
+
 
     return {
       props: { detail: detailResponse },

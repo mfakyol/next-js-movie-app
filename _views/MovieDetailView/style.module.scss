@@ -1,0 +1,20 @@
+.movieDetailView {
+
+
+  & > .content {
+
+    width: 100%;    
+    max-width: 1300px;
+    margin: 0 auto;
+
+
+    & > .leftContent {
+      flex-grow: 1;
+      width: calc(100% - 300px);
+    }
+
+    & > .rightContent {
+      min-width: 300px;
+    }
+  }
+}
