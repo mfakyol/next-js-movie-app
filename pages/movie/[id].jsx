@@ -25,7 +25,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
-    const detailResponse = await http.get(`/movie/${context.params.id}?language=${context.locale}`);
+    const detailResponse = await http.get(
+      `/movie/${context.params.id}?language=${context.locale}&append_to_response=videos,images`
+    );
 
     return {
       props: { detail: detailResponse },

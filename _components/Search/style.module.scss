@@ -4,6 +4,7 @@
   display: flex;
   border-radius: 20px;
   background-color: #fff;
+  border: 1px solid #f0f0f0;
 
   & > .searchInput {
     width: 100%;
@@ -86,6 +87,7 @@
         & > .originalTitle {
           font-weight: 600;
           color: #555;
+          margin-left: .5ch;
         }
       }
     }

@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:32px;
+
+
+  & > .prev,
+  & > .next {
+    font-weight: 500;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+
+  & > .page {
+    margin: 0 4px;
+    padding: 4px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &.currentPage {
+      cursor: default;
+      font-weight: 600;
+      background-color: #31d0a6;
+      color: #fff;
+    }
+  }
+}

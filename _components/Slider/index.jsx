@@ -18,16 +18,10 @@ function Slider({ items = [], title }) {
   }, []);
 
   const scrollEvent = useCallback((e) => {
-    if (e.target.scrollLeft == 0) {
-      setShowLeftArrow(false);
-    } else {
-      setShowLeftArrow(true);
-    }
-    if (e.target.scrollLeft + e.target.clientWidth == e.target.scrollWidth) {
-      setShowRightArrow(false);
-    } else {
-      setShowRightArrow(true);
-    }
+    if (e.target.scrollLeft == 0) setShowLeftArrow(false);
+    else setShowLeftArrow(true);
+    if (e.target.scrollLeft + e.target.clientWidth > e.target.scrollWidth - 1) setShowRightArrow(false);
+    else setShowRightArrow(true);
   }, []);
 
   useEffect(() => {

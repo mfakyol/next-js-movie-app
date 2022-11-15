@@ -77,9 +77,10 @@ function Search() {
               <div className={classes.title}>{result.title} </div>
               <div className={classes.detail}>
                 <span className={classes.score}>{(result.vote_average * 10).toFixed(0)}%</span>
-                <span className={classes.releaseDate}>{result.release_date.slice(0, 4)}</span>
+                <span className={classes.releaseDate}>{result.release_date?.slice(0, 4)}</span>
+
                 {result.title != result.original_title && (
-                  <span className={classes.originalTitle}> - {result.original_title}</span>
+                  <span className={classes.originalTitle}>{`- ${result.original_title}`}</span>
                 )}
               </div>
             </Link>

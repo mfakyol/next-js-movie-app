@@ -3,7 +3,7 @@ import Slider from "_components/Slider";
 import classes from "./style.module.scss";
 
 function HomeView({ popularMovies, trendingMovies, upcomingMovies }) {
-  console.log(trendingMovies);
+
   return (
     <main className={classes.homeView}>
       <div className={classes.heroes}>
