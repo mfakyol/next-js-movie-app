@@ -1,9 +1,7 @@
-import slug from "lib/slug";
-import Link from "next/link";
 import classes from "./style.module.scss";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-function Slider({ items = [], title }) {
+function Slider({ title, children }) {
   const ref = useRef();
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
@@ -55,19 +53,9 @@ function Slider({ items = [], title }) {
           />
         )}
         <div ref={ref} className={`${classes.sliderList} hideScrollbar`}>
-          {items.map((item, index) => (
-            <div key={index} className={classes.sliderItem} title={item.title}>
-              <Link href={`/movie/${item.id}/${slug(item.title)}`} key={item.id} className={classes.sliderItemContent}>
-                <p className={classes.score}>{(item.vote_average * 10).toFixed(0)}%</p>
-                <img
-                  className={classes.poster}
-                  src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`}
-                  alt=""
-                  loading="lazy"
-                />
-                <p className={classes.title}>{item.title}</p>
-                <p className={classes.releaseDate}>{item.release_date}</p>
-              </Link>
+          {children.map((child) => (
+            <div key={child.key} className={classes.sliderItem}>
+              {child}
             </div>
           ))}
         </div>

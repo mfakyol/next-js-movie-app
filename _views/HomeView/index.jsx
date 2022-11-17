@@ -1,9 +1,10 @@
+import slug from "lib/slug";
+import Link from "next/link";
 import Search from "_components/Search";
 import Slider from "_components/Slider";
 import classes from "./style.module.scss";
 
 function HomeView({ popularMovies, trendingMovies, upcomingMovies }) {
-
   return (
     <main className={classes.homeView}>
       <div className={classes.heroes}>
@@ -15,12 +16,42 @@ function HomeView({ popularMovies, trendingMovies, upcomingMovies }) {
       </div>
 
       <section className={classes.section}>
-        <Slider title="Popular" items={popularMovies} />
-        <Slider title="Coming Soon" items={upcomingMovies} />
-        <Slider title="Weakly Trending" items={trendingMovies} />
+        <Slider title="Popular">
+          {popularMovies.map((popularMovie) => (
+            <SliderItemContent key={popularMovie.id} item={popularMovie} />
+          ))}
+        </Slider>
+
+        <Slider title="Coming Soon">
+          {upcomingMovies.map((upcomingMovie) => (
+            <SliderItemContent key={upcomingMovie.id} item={upcomingMovie} />
+          ))}
+        </Slider>
+
+        <Slider title="Weakly Trending">
+          {trendingMovies.map((trendingMovie) => (
+            <SliderItemContent key={trendingMovie.id} item={trendingMovie} />
+          ))}
+        </Slider>
       </section>
     </main>
   );
 }
 
 export default HomeView;
+
+const SliderItemContent = ({ item }) => {
+  return (
+    <Link key={item.id} href={`/movie/${item.id}/${slug(item.title)}`} className={classes.sliderItemContent}>
+      <p className={classes.score}>{(item.vote_average * 10).toFixed(0)}%</p>
+      <img
+        className={classes.poster}
+        src={`https://image.tmdb.org/t/p/w220_and_h330_face${item.poster_path}`}
+        alt=""
+        loading="lazy"
+      />
+      <p className={classes.title}>{item.title}</p>
+      <p className={classes.releaseDate}>{item.release_date}</p>
+    </Link>
+  );
+};

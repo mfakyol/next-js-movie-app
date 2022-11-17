@@ -26,9 +26,11 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   try {
     const detailResponse = await http.get(
-      `/movie/${context.params.id}?language=${context.locale}&append_to_response=videos,images,credits,budget,revenue,status`
+      `/movie/${context.params.id}?language=${context.locale}&append_to_response=videos,images,credits,budget,revenue,status,reviews,images`
     );
 
+    if (detailResponse.videos?.results?.length > 0)
+      detailResponse.videos.results = detailResponse.videos.results.filter((video) => video.site == "YouTube") || null;
 
     return {
       props: { detail: detailResponse },
