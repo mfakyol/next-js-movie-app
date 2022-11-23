@@ -25,8 +25,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   try {
+    const id = context.params.id.split("-")[0]
     const detailResponse = await http.get(
-      `/movie/${context.params.id}?language=${context.locale}&append_to_response=videos,images,credits,budget,revenue,status,reviews,images`
+      `/movie/${id}?language=${context.locale}&append_to_response=videos,images,credits,budget,revenue,status,reviews,images,keywords,certification`
     );
 
     if (detailResponse.videos?.results?.length > 0)

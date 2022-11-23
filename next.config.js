@@ -1,9 +1,11 @@
+const { defaultLang, langs } = require("./config");
+
 module.exports = {
   reactStrictMode: false,
 
   i18n: {
-    locales: ["en", "tr", "de"],
-    defaultLocale: "en",
+    locales: langs,
+    defaultLocale: defaultLang,
   },
 
   async rewrites() {

@@ -1,18 +1,26 @@
 .searchView {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1364px;
   margin: 0 auto;
+  padding: 0 32px;
+
+  @media (max-width: 767px) {
+    padding: 0 16px;
+  }
+
+  & > .search {
+    margin-top: 16px;
+  }
 
   & > .results {
     margin-top: 32px;
-    
+
     & > .result {
       display: flex;
       height: 141px;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 4px rgb(0 0 0 / 25%);
-      border: 1px solid #f0f0f0;
+      box-shadow: 0 0px 2px rgb(0 0 0 / 25%);
       margin-bottom: 16px;
 
       & > .poster {
@@ -40,7 +48,6 @@
           color: #555;
 
           & > .date {
-
           }
 
           & > .originalTitle {

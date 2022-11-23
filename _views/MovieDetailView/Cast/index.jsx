@@ -1,10 +1,14 @@
+import useTranslation from "contexts/translationContext";
 import Slider from "_components/Slider";
 import classes from "./style.module.scss";
 
 function Cast({ castList }) {
+
+  const t = useTranslation();
+
   return (
     <div className={classes.cast}>
-      <Slider title="Cast">
+      <Slider title={t("cast")}>
         {castList.slice(0, 20).map((cast) => (
           <div key={cast.id} className={classes.item}>
             <img

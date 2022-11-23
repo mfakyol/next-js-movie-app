@@ -27,14 +27,14 @@ function SearchView() {
 
   return (
     <div className={classes.searchView}>
-      <Search />
+      <Search className={classes.search} />
       <div className={classes.results}>
         {results.map((result) => (
-          <Link href={`/movie/${result.id}/${slug(result.title)}`} key={result.id} className={classes.result}>
+          <Link href={`/movie/${result.id}-${slug(result.original_title)}`} key={result.id} className={classes.result}>
             <img
               className={classes.poster}
               src={`https://image.tmdb.org/t/p/w94_and_h141_bestv2${result.poster_path}`}
-              alt=""
+              alt={result.title}
               loading="lazy"
             />
             <div className={classes.resultInfo}>

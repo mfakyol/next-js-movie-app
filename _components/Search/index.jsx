@@ -5,8 +5,11 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import slug from "lib/slug";
 import useOnClickOutside from "@hooks/useOnClickOutside";
+import useTranslation from "contexts/translationContext";
 
-function Search() {
+function Search({ className = "" }) {
+  const t = useTranslation();
+
   const router = useRouter();
   const timeoutRef = useRef();
   const searchInputRef = useRef();
@@ -57,23 +60,27 @@ function Search() {
   }, []);
 
   return (
-    <div ref={searchWrapperRef} className={classes.searchWrapper}>
+    <div ref={searchWrapperRef} className={`${classes.searchWrapper} ${className}`}>
       <input
         ref={searchInputRef}
         onKeyUp={handleOnKeyUp}
         onChange={handleOnChange}
         className={classes.searchInput}
-        placeholder="Search Film..."
+        placeholder={t("search_movie").toCapitalCase()}
         onFocus={() => setShowResults(true)}
       />
       <button ref={searchButtonRef} onClick={handleOnClick} className={classes.searchButton}>
-        Search
+        {t("search").toCapitalCase()}
       </button>
 
       {showResults && (
         <div className={classes.results}>
           {results.map((result) => (
-            <Link href={`/movie/${result.id}/${slug(result.title)}`} key={result.id} className={classes.result}>
+            <Link
+              href={`/movie/${result.id}-${slug(result.original_title)}`}
+              key={result.id}
+              className={classes.result}
+            >
               <div className={classes.title}>{result.title} </div>
               <div className={classes.detail}>
                 <span className={classes.score}>{(result.vote_average * 10).toFixed(0)}%</span>

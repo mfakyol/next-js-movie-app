@@ -1,10 +1,12 @@
+import useTranslation from "contexts/translationContext";
 import Slider from "_components/Slider";
 import classes from "./style.module.scss";
 
 function Videos({ videos }) {
+  const t = useTranslation();
   return (
     <div>
-      <Slider title="Videos">
+      <Slider title={t("videos")}>
         {videos.map((video) => (
           <iframe
             key={video.id}
@@ -12,7 +14,7 @@ function Videos({ videos }) {
             height="180"
             src={`https://www.youtube.com/embed/${video.key}`}
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>

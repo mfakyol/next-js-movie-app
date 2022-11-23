@@ -1,20 +1,76 @@
 .movieDetailView {
-
-
   & > .content {
-
-    width: 100%;    
-    max-width: 1300px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1364px;
+    padding: 0 32px;
     margin: 0 auto;
 
+    @media (max-width: 767px) {
+      flex-direction: column;
+      padding: 0 16px;
+    }
 
     & > .leftContent {
       flex-grow: 1;
-      width: calc(100% - 300px);
+      width: calc(100% - 332px);
+      margin-right: 32px;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
 
     & > .rightContent {
       min-width: 300px;
+      margin-top: 32px;
+      position: sticky;
+      top: 96px;
+      height: 100%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+        position: static;
+      }
+
+      & > .info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+
+        & > .infoLabel {
+          font-weight: 600;
+          margin-bottom: 4px;
+        }
+      }
+
+      & > .categoryWrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+
+        & > .categoryLabel {
+          font-weight: 600;
+          margin-bottom: 4px;
+        }
+
+        & > .categories {
+          display: flex;
+          flex-wrap: wrap;
+
+          & > .category {
+            font-size: 13px;
+            font-weight: 600;
+            background-color: #f0f0f0;
+            border: 1px solid #d0d0d0;
+            padding: 6px 10px;
+            margin-right: 4px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+          }
+        }
+      }
     }
   }
 }

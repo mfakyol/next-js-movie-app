@@ -1,0 +1,97 @@
+{
+  "welcome": {
+    "tr": "Hoşgeldin",
+    "en": "Welcome",
+    "de": "Willkommen"
+  },
+  "slogan": {
+    "tr": "Milyonlarca filmi, Şimdi keşfedin.",
+    "en": "Discover millions of films now.",
+    "de": "Jetzt Millionen von Filmen entdecken."
+  },
+  "search_movie": {
+    "tr": "film ara...",
+    "en": "search movie...",
+    "de": "film suchen..."
+  },
+  "search": {
+    "tr": "Ara",
+    "en": "search",
+    "de": "suche"
+  },
+  "popular": {
+    "tr": "popüler",
+    "en": "popular",
+    "de": "beliebt"
+  },
+  "coming_soon": {
+    "tr": "yakında",
+    "en": "coming soon",
+    "de": "demnächst"
+  },
+  "weakly_trending": {
+    "tr": "haftanın trendleri",
+    "en": "weakly trending",
+    "de": "schwache tendenz"
+  },
+  "overview": {
+    "tr": "genel bakış",
+    "en": "overview",
+    "de": "übersicht"
+  },
+  "user_score": {
+    "tr": "benutzer-bewertung",
+    "en": "user score",
+    "de": "kullanıcı puanı"
+  },
+  "cast": {
+    "tr": "oyuncu kadrosu",
+    "en": "cast",
+    "de": "gießen"
+  },
+  "videos": {
+    "tr": "videolar",
+    "en": "videos",
+    "de": "videos"
+  },
+  "status": {
+    "tr": "durum",
+    "en": "status",
+    "de": "status"
+  },
+  "posters": {
+    "tr": "posterler",
+    "en": "posters",
+    "de": "plakate"
+  },
+  "original_title": {
+    "tr": "orjinal başlık",
+    "en": "original title",
+    "de": "originaltitel"
+  },
+  "budget": {
+    "tr": "bütçe",
+    "en": "budget",
+    "de": "haushalt"
+  },
+  "revenue": {
+    "tr": "gelir",
+    "en": "posters",
+    "de": "Umsatz"
+  },
+  "genres": {
+    "tr": "türler",
+    "en": "genres",
+    "de": "gattungen"
+  },
+  "keywords": {
+    "tr": "anahtar kelimeler",
+    "en": "keywords",
+    "de": "schlüsselwörter"
+  },
+  "spoken_languages": {
+    "tr": "konuşulan diller",
+    "en": "spoken languages",
+    "de": "gesprochene sprachen"
+  }
+}
