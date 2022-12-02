@@ -6,15 +6,27 @@
     margin-top: 16px;
   }
 
-  & > .sliderTitle {
-    font-weight: 600;
-    font-size: 22px;
-    margin-bottom: 16px;
-    color: #242424;
-    text-transform: capitalize;
+  & > .sliderTitleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    @media (max-width: 767px) {
-      font-size: 20px;
+    & > .sliderTitle {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 16px;
+      color: #242424;
+      text-transform: capitalize;
+
+      @media (max-width: 767px) {
+        font-size: 20px;
+      }
+    }
+
+    & > .seeAllLink {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
     }
   }
 

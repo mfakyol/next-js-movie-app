@@ -1,8 +1,12 @@
 import classes from "./style.module.scss";
 import { useCallback, useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import useTranslation from "contexts/translationContext";
 
-function Slider({ title, children }) {
+function Slider({ title, children, seeAllLink = "" }) {
   const ref = useRef();
+  const t = useTranslation();
+
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
 
@@ -34,7 +38,16 @@ function Slider({ title, children }) {
 
   return (
     <div className={classes.slider}>
-      {title && <h4 className={classes.sliderTitle}>{title}</h4>}
+      {title && (
+        <div className={classes.sliderTitleWrapper}>
+          <h4 className={classes.sliderTitle}>{title}</h4>
+          {seeAllLink && (
+            <Link className={classes.seeAllLink} href={seeAllLink}>
+              {t("see_all").toCapitalCase()}
+            </Link>
+          )}
+        </div>
+      )}
       <div className={classes.sliderListWrapper}>
         {showLeftArrow && (
           <img

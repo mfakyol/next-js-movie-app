@@ -9,11 +9,6 @@ module.exports = {
   },
 
   async rewrites() {
-    return [
-      {
-        source: "/movie/:id/:slug",
-        destination: "/movie/:id",
-      },
-    ];
+    return [];
   },
 };

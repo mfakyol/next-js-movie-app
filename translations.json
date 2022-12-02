@@ -93,5 +93,20 @@
     "tr": "konuşulan diller",
     "en": "spoken languages",
     "de": "gesprochene sprachen"
+  },
+  "cast_and_crew": {
+    "tr": "oyuncular ve eki̇p",
+    "en": "cast and crew",
+    "de": "Besetzung und Mannschaft"
+  },
+  "crew": {
+    "tr": "eki̇p",
+    "en": "crew",
+    "de": "Mannschaft"
+  },
+  "see_all": {
+    "tr": "hepsini gör",
+    "en": "see all",
+    "de": "siehe alle"
   }
 }

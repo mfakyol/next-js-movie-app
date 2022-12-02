@@ -1,7 +1,7 @@
 import http from "@services/httpService";
 import MovieDetailView from "@views/MovieDetailView";
 import Head from "next/head";
-import React from "react";
+
 const ONE_DAY = 60 * 60 * 24;
 
 function MovieDetailPage({ detail }) {

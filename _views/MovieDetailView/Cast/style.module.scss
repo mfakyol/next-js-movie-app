@@ -10,8 +10,11 @@
   height: 100%;
 
   & > .photo {
+    width: 138px;
+    height: 175px;
     min-width: 138px;
     min-height: 175px;
+    object-fit: cover;
   }
 
   & > .name {
