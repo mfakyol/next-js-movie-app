@@ -1,15 +1,17 @@
 import "@styles/🌎.scss";
-import { TranslationContextProvider } from "contexts/translationContext";
+import "../lib/StringObjectExpander";
 import Navbar from "_components/Navbar";
-import StringObjectExpander from '../lib/StringObjectExpander'
+import { ThemeProvider } from "contexts/ThemeContext";
+import { TranslationContextProvider } from "contexts/translationContext";
 
 function MyApp({ Component, pageProps }) {
-  
   return (
-    <TranslationContextProvider>
-      <Navbar />
-      <Component {...pageProps} />
-    </TranslationContextProvider>
+    <ThemeProvider>
+      <TranslationContextProvider>
+        <Navbar />
+        <Component {...pageProps} />
+      </TranslationContextProvider>
+    </ThemeProvider>
   );
 }
 

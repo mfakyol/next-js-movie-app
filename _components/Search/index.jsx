@@ -1,11 +1,11 @@
+import slug from "lib/slug";
+import Link from "next/link";
 import http from "@services/httpService";
 import classes from "./style.module.scss";
 import Router, { useRouter } from "next/router";
-import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import slug from "lib/slug";
 import useOnClickOutside from "@hooks/useOnClickOutside";
 import useTranslation from "contexts/translationContext";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 function Search({ className = "" }) {
   const t = useTranslation();

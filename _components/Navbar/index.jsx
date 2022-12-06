@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import LangDropdown from "_components/LangDropdown";
+import ThemeDropdown from "_components/ThemeDropdown";
 import classes from "./style.module.scss";
 
 function Navbar() {
@@ -45,6 +46,7 @@ function Navbar() {
           </svg>
         </Link>
         
+        <ThemeDropdown/>
         <LangDropdown/>
       </nav>
     </header>
