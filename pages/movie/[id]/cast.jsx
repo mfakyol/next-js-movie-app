@@ -7,11 +7,11 @@ const ONE_DAY = 60 * 60 * 24;
 
 function Cast(props) {
   const t = useTranslation();
-  
+
   return (
     <>
       <Head>
-        <title>{`${props.title} | ${t("cast_and_crew").toCapitalCase()}`}</title>
+        <title>{`${props.title} | ${t("cast_and_crew").toCapitalCase()} | Movie App`}</title>
       </Head>
       <CastView {...props} />
     </>

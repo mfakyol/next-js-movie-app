@@ -153,5 +153,10 @@
     "tr": "biyografi",
     "en": "biography",
     "de": "biographie"
+  },
+  "home": {
+    "tr": "ana sayfa",
+    "en": "home",
+    "de": "startseite"
   }
 }

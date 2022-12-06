@@ -1,17 +1,17 @@
 .homeView {
-  padding: 0 32px;
+  padding: 32px;
   max-width: 1364px;
   margin: 0 auto;
 
   @media (max-width: 767px) {
-    padding: 0 16px;
+    padding: 16px;
   }
 
   & > .heroes {
     position: relative;
     height: auto;
     width: 100%;
-    margin: 32px auto 0;
+    margin: 0 auto;
     padding: 32px;
     background-image: url("/images/heroes-bg.png");
     background-repeat: no-repeat;

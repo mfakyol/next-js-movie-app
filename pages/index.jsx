@@ -1,14 +1,18 @@
 import Head from "next/head";
 import HomeView from "@views/HomeView";
 import http from "@services/httpService";
+import useTranslation from "contexts/translationContext";
 
 const ONE_DAY = 60 * 60 * 24;
 
-function Home({popularMovies, trendingMovies, upcomingMovies }) {
+function Home({ popularMovies, trendingMovies, upcomingMovies }) {
+
+  const t = useTranslation();
+
   return (
     <>
       <Head>
-        <title>Home | Movie App</title>
+        <title>{`${t("home").toCapitalCase()} | Movie App`}</title>
       </Head>
       <HomeView popularMovies={popularMovies} trendingMovies={trendingMovies} upcomingMovies={upcomingMovies} />
     </>
