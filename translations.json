@@ -108,5 +108,50 @@
     "tr": "hepsini gör",
     "en": "see all",
     "de": "siehe alle"
+  },
+  "known_for": {
+    "tr": "bilinen işi",
+    "en": "known for",
+    "de": "bekannt für"
+  },
+  "known_credit": {
+    "tr": "bilinen kredi",
+    "en": "known credit",
+    "de": "bekanntermaßen kredit"
+  },
+  "gender": {
+    "tr": "cinsiyet",
+    "en": "gender",
+    "de": "Geschlecht"
+  },
+  "gender-1": {
+    "tr": "kadın",
+    "en": "women",
+    "de": "frauen"
+  },
+  "gender-2": {
+    "tr": "erkek",
+    "en": "men",
+    "de": "männer"
+  },
+  "birthday": {
+    "tr": "doğum günü",
+    "en": "geburtstag",
+    "de": "siehe alle"
+  },
+  "place_of_birth": {
+    "tr": "doğum yeri̇",
+    "en": "place of birth",
+    "de": "geburtsort"
+  },
+  "deathday": {
+    "tr": "ölüm günü",
+    "en": "deathday",
+    "de": "todestag"
+  },
+  "biography": {
+    "tr": "biyografi",
+    "en": "biography",
+    "de": "biographie"
   }
 }

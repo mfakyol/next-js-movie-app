@@ -1,0 +1,95 @@
+.personView {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  max-width: 1364px;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  & > .left {
+    width: 300px;
+
+    @media (max-width: 767px) {
+      text-align: center;
+      width: 100%;
+
+      & > .profilePhoto {
+        width: 60% !important;
+        height: unset !important;
+      }
+    }
+
+    & > .profilePhoto {
+      width: 300px;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    & > .personelInfo {
+      margin-top: 16px;
+
+      & > .title {
+        margin-bottom: 4px;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+
+      & > .info {
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  & > .right {
+    width: calc(100% - 332px);
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    & > .title {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    & > .biographyTitle {
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 18px;
+
+      color: #242424;
+      text-transform: capitalize;
+    }
+
+    & > .biography {
+      font-size: 15px;
+    }
+
+    & .item {
+      display: block;
+
+      & > .poster {
+        width: 150px;
+        height: 225px;
+        border-radius: 10px;
+      }
+
+      & > .name {
+        font-size: 14px;
+      }
+
+      & > .role {
+        font-size: 14px;
+        font-weight: 600;
+        color: #808080;
+      }
+    }
+  }
+}

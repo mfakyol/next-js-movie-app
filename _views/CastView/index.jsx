@@ -5,7 +5,6 @@ import slug from "lib/slug";
 
 function CastView(props) {
   const t = useTranslation();
-  console.log(props.crew.crew[0]);
 
   const handleOnError = (e) => {
     e.target.onerror = null;
