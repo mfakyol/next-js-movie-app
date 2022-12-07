@@ -9,6 +9,7 @@ A project using the [TMDB](https://developers.themoviedb.org/) api made with Nex
 - i18n
 
 ## Features
+- SEO
 - SSG
 - ISR
 - SPA
