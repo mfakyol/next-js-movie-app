@@ -2,6 +2,7 @@ import classes from "./style.module.scss";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import useTranslation from "contexts/translationContext";
+import ArrowIcon from "_icons/ArrowIcon";
 
 function Slider({ title, children, seeAllLink = "" }) {
   const ref = useRef();
@@ -50,20 +51,10 @@ function Slider({ title, children, seeAllLink = "" }) {
       )}
       <div className={classes.sliderListWrapper}>
         {showLeftArrow && (
-          <img
-            className={`${classes.arrow} ${classes.left}`}
-            onClick={() => handleArrowOnClick("left")}
-            src="/icons/arrow.svg"
-            alt=""
-          />
+          <ArrowIcon onClick={() => handleArrowOnClick("left")} className={`${classes.arrow} ${classes.left}`} />
         )}
         {showRightArrow && (
-          <img
-            className={`${classes.arrow} ${classes.right}`}
-            onClick={() => handleArrowOnClick("right")}
-            src="/icons/arrow.svg"
-            alt=""
-          />
+          <ArrowIcon onClick={() => handleArrowOnClick("right")} className={`${classes.arrow} ${classes.right}`} />
         )}
         <div ref={ref} className={`${classes.sliderList} hideScrollbar`}>
           {children.map((child) => (

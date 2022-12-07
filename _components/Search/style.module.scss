@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: var(--bg-primary);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
 
   & > .searchInput {
@@ -13,11 +13,10 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #353535;
     border-radius: 20px 0 0 20px;
     border: none;
     outline: none;
-
+    background-color: transparent;
   }
 
   & > .searchButton {
@@ -39,12 +38,12 @@
   & > .results {
     position: absolute;
     top: 110%;
-    background-color: #fff;
-    color: #121212;
+    background-color: var(--bg-primary);
     border-radius: 10px;
     width: 100%;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
     overflow: hidden;
+    color: var(--text-primary);
 
     & > .result {
       display: block;
@@ -52,7 +51,7 @@
       padding: 8px 16px;
 
       &:hover {
-        background-color: #f0f0f0;
+        background-color: rgba(128, 128, 128, 0.1);
       }
 
       & > .title {
@@ -74,21 +73,21 @@
           height: 20px;
           margin-right: 8px;
           border-radius: 10px;
-
-          background-color: #f0f0f0;
+          color: #fff;
+          background-color: var(--text-disabled);
           font-size: 12px;
           font-weight: 600;
         }
 
         & > .releaseDate {
           font-weight: 600;
-          color: #555;
+          color: var(--text-disabled);
         }
 
         & > .originalTitle {
           font-weight: 600;
           color: #555;
-          margin-left: .5ch;
+          margin-left: 0.5ch;
         }
       }
     }

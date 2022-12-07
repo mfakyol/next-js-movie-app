@@ -1,8 +1,8 @@
 import useTranslation from "contexts/translationContext";
 import slug from "lib/slug";
 import Link from "next/link";
-import Search from "_components/Search";
-import Slider from "_components/Slider";
+import Search from "@components/Search";
+import Slider from "@components/Slider";
 import classes from "./style.module.scss";
 
 function HomeView({ popularMovies, trendingMovies, upcomingMovies }) {

@@ -1,6 +1,6 @@
 import "@styles/🌎.scss";
 import "../lib/StringObjectExpander";
-import Navbar from "_components/Navbar";
+import Navbar from "@components/Navbar";
 import { ThemeProvider } from "contexts/ThemeContext";
 import { TranslationContextProvider } from "contexts/translationContext";
 

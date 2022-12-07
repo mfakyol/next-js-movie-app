@@ -68,6 +68,11 @@
             margin-right: 4px;
             margin-bottom: 8px;
             border-radius: 8px;
+
+            [theme="dark"] & {
+              background-color: #242424;
+              border: 1px solid #4a4a4a;
+            }
           }
         }
       }

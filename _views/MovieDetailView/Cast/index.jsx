@@ -2,7 +2,7 @@ import useTranslation from "contexts/translationContext";
 import slug from "lib/slug";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Slider from "_components/Slider";
+import Slider from "@components/Slider";
 import classes from "./style.module.scss";
 
 function Cast({ castList }) {

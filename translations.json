@@ -158,5 +158,25 @@
     "tr": "ana sayfa",
     "en": "home",
     "de": "startseite"
+  },
+  "theme": {
+    "tr": "tema",
+    "en": "theme",
+    "de": "thema"
+  },
+  "auto": {
+    "tr": "oto",
+    "en": "auto",
+    "de": "auto"
+  },
+  "light": {
+    "tr": "açık",
+    "en": "light",
+    "de": "licht"
+  },
+  "dark": {
+    "tr": "koyu",
+    "en": "dark",
+    "de": "dunkel"
   }
 }

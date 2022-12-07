@@ -1,8 +1,9 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useRef } from "react";
-import LangDropdown from "_components/LangDropdown";
-import ThemeDropdown from "_components/ThemeDropdown";
 import classes from "./style.module.scss";
+import LangDropdown from "@components/LangDropdown";
+const ThemeDropdown = dynamic(() => import("@components/ThemeDropdown"), { ssr: false });
 
 function Navbar() {
   const navbarRef = useRef();
@@ -45,9 +46,9 @@ function Navbar() {
             </defs>
           </svg>
         </Link>
-        
-        <ThemeDropdown/>
-        <LangDropdown/>
+
+        <ThemeDropdown />
+        <LangDropdown />
       </nav>
     </header>
   );

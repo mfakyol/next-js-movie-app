@@ -2,6 +2,7 @@ import { langs } from "config";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+import ArrowIcon from "_icons/ArrowIcon";
 import classes from "./style.module.scss";
 
 function LangDropdown() {
@@ -28,7 +29,7 @@ function LangDropdown() {
   return (
     <div className={classes.langDropdown}>
       <p ref={dropdownRef} className={classes.selected} onClick={() => setIsOpen((prev) => !prev)}>
-        {router.locale} <img className={classes.arrowIcon} src="/icons/arrow.svg" alt="" />
+        {router.locale}  <ArrowIcon className={classes.arrowIcon}/>
       </p>
       <ul className={`${classes.list} ${isOpen ? classes.open : ""}`}>
         {langs.map((lang) => (

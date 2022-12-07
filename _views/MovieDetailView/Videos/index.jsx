@@ -1,5 +1,5 @@
 import useTranslation from "contexts/translationContext";
-import Slider from "_components/Slider";
+import Slider from "@components/Slider";
 import classes from "./style.module.scss";
 
 function Videos({ videos }) {

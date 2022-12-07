@@ -9,6 +9,12 @@
   overflow: hidden;
   min-width: 138px;
   height: 100%;
+  background-color: #fafafa;
+
+  [theme=dark] & {
+    background-color: #1b1b1b;
+    border: 1px solid #4a4a4a;
+  }
 
   & > .photo {
     width: 138px;

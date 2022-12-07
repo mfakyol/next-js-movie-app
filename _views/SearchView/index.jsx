@@ -3,8 +3,8 @@ import slug from "lib/slug";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Pagination from "_components/Pagination";
-import Search from "_components/Search";
+import Pagination from "@components/Pagination";
+import Search from "@components/Search";
 import classes from "./style.module.scss";
 
 function SearchView() {

@@ -1,8 +1,8 @@
+import slug from "lib/slug";
+import Link from "next/link";
+import Slider from "@components/Slider";
 import classes from "./style.module.scss";
 import useTranslation from "contexts/translationContext";
-import Link from "next/link";
-import slug from "lib/slug";
-import Slider from "_components/Slider";
 
 function PersonView({ person }) {
   const t = useTranslation();
