@@ -1,7 +1,7 @@
 # MovieDB
 A project using the [TMDB](https://developers.themoviedb.org/) api made with Nextjs.
 
-[Live Demo](movieapp.mfakyol.com)
+[Live Demo](http://movieapp.mfakyol.com)
 
 ## Tech
 - Next.js
