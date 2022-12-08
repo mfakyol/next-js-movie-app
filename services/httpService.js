@@ -1,4 +1,4 @@
-const apiToken = process.env.TMDB_API_TOKEN;
+const apiToken = process.env.NEXT_PUBLIC_TMDB_API_TOKEN;
 const apiUrl = process.env.NEXT_PUBLIC_TMDB_API_URL;
 
 const _fetch = async (method, endPoint, data) => {
